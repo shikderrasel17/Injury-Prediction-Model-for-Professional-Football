@@ -1,0 +1,512 @@
+ln(2)
+#Q18-23
+log(2)
+#Q3
+29/40
+50/60
+29/39
+50/61
+44.2727-39.85
+52.5-44.61111
+(7.88889+4.4227)/2 #precip main effect
+((44.61111-39.85)+(52.5-44.27273))/2
+library(readxl)
+data <- read_csv("new_dataset_v4_data.csv")
+data <- read.csv("new_dataset_v4_data.csv")
+library(readxl)
+data <- read.csv("new_dataset_v4_data.csv")
+data <- read.csv("new_dataset_v4_data.csv")
+data <- read_excel("new_dataset_v4_data.xlsx")
+library(readxl)
+data <- read_excel("new_dataset_v4_data.xlsx")
+data <- read_excel("new_dataset_v4_data.xlsx")
+data <- read_excel("new_dataset_v4_data.xlsx")
+library(readxl)
+data <- read_excel("C:/Users/yasir/OneDrive/GW/Academic/6317 - Practicum/Model/new_dataset_v4_data.xlsx")
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1),]
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1),]
+unique(data2$F1S27)
+data2<-data2[!(data2$F2B1BG==-9)]
+data2<-data2[!(data2$F2B18G==-9)]
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1) | data2$F2B18G==-9,]
+unique(data2$F2B18G)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1) | data2$F2B18G==-9,]
+unique(data2$F2B18G)
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9,]
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9,)]
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F2B18G)
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(BYS42 ~ BYS71G, data = data2)
+summary(F1.lm) # R squared: 6.356%
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 6.356%
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data)
+summary(F1.lm) # R squared: 6.356%
+data$F1S64<- as.factor(data$F1S64)
+data$BYP85 <- as.factor(data$BYP85)
+data$BYPARED <- as.factor(data$BYPARED)
+data$F1RGPP2 <- as.factor(data$F1RGPP2)
+data$BYS23B <- as.factor(data$BYS23B)
+data$F1S31 <- as.factor(data$F1S31)
+data$BYS25EA <- as.factor(data$BYS25EA)
+data$BYS42 <- as.factor(data$BYS42)
+data$BYS46B <- as.factor(data$BYS46B)
+data$BYS46A <- as.factor(data$BYS46A)
+data$BYS71G <- as.factor(data$BYS71G)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S64<- as.factor(data$F1S64)
+data$BYP85 <- as.factor(data$BYP85)
+data$BYPARED <- as.factor(data$BYPARED)
+data$F1RGPP2 <- as.factor(data$F1RGPP2)
+data$BYS23B <- as.factor(data$BYS23B)
+data$F1S31 <- as.factor(data$F1S31)
+data$BYS25EA <- as.factor(data$BYS25EA)
+data$BYS42 <- as.factor(data$BYS42)
+data$BYS46B <- as.factor(data$BYS46B)
+data$BYS46A <- as.factor(data$BYS46A)
+data$BYS71G <- as.factor(data$BYS71G)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S60 <- as.factor(data$F1S27)
+data$F2B18G <- as.factor(data$F2B18G)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data)
+summary(F1.lm) # R squared: 6.356%
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 6.356%
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(BYS71G ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 6.356%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data)
+summary(F2.lm) # R squared: 23.6%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data2)
+summary(F2.lm) # R squared: 23.6%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # NON SIGNIFICANT
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27 ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 2.4%
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18G ~ F1S27, data = data)
+summary(F3.lm) #R squared: 2.7%
+data$F1S7 <- as.factor(data$F1S27)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S7 <- as.factor(data$F1S27)
+data$F2B18G <- as.factor(data$F2B18G)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 6.356%
+summary(F1.lm) # R squared: 1.7%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data2)
+summary(F2.lm) # R squared: 23.6%
+summary(F2.lm) # R squared: 1.17%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # NON SIGNIFICANT
+summary(F7.lm) # 1.7%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27 ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18G ~ F1S27, data = data)
+data$F1S64<- as.factor(data$F1S64)
+data$BYP85 <- as.factor(data$BYP85)
+data$BYPARED <- as.factor(data$BYPARED)
+data$F1RGPP2 <- as.factor(data$F1RGPP2)
+data$BYS23B <- as.factor(data$BYS23B)
+data$F1S31 <- as.factor(data$F1S31)
+data$BYS25EA <- as.factor(data$BYS25EA)
+data$BYS42 <- as.factor(data$BYS42)
+data$BYS46B <- as.factor(data$BYS46B)
+data$BYS46A <- as.factor(data$BYS46A)
+data$BYS71G <- as.factor(data$BYS71G)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S27num <- data$F1S27
+data$F1S27 <- as.factor(data$F1S27)
+data$F2B18G <- as.factor(data$F2B18G)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 1.7%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data2)
+summary(F2.lm) # R squared: 1.17%
+summary(F2.lm) # R squared: 1.26%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # 1.7%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27 ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18G ~ F1S27num, data = data)
+summary(F3.lm) #R squared: 2.7%
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- glm(F2B18G ~ F1S27num, data = data2)
+?glm
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- glm(F2B18G ~ F1S27num, data = data2,family=multinomial(link='logit') )
+data$F1S64<- as.factor(data$F1S64)
+data$BYP85 <- as.factor(data$BYP85)
+data$BYPARED <- as.factor(data$BYPARED)
+data$F1RGPP2 <- as.factor(data$F1RGPP2)
+data$BYS23B <- as.factor(data$BYS23B)
+data$F1S31 <- as.factor(data$F1S31)
+data$BYS25EA <- as.factor(data$BYS25EA)
+data$BYS42 <- as.factor(data$BYS42)
+data$BYS46B <- as.factor(data$BYS46B)
+data$BYS46A <- as.factor(data$BYS46A)
+data$BYS71G <- as.factor(data$BYS71G)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S27num <- data$F1S27
+data$F1S27 <- as.factor(data$F1S27)
+data$F2B18G <- data$F2B18G
+data$F2B18G <- as.factor(data$F2B18G)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 1.7%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data2)
+summary(F2.lm) # R squared: 1.26%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # 1.7%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+data$F1S27 <- as.factor(data$F1S27num)
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+data <- read_excel("C:/Users/yasir/OneDrive/GW/Academic/6317 - Practicum/Model/new_dataset_v4_data.xlsx")
+data$F1S64<- as.factor(data$F1S64)
+data$BYP85 <- as.factor(data$BYP85)
+data$BYPARED <- as.factor(data$BYPARED)
+data$F1RGPP2 <- as.factor(data$F1RGPP2)
+data$BYS23B <- as.factor(data$BYS23B)
+data$F1S31 <- as.factor(data$F1S31)
+data$BYS25EA <- as.factor(data$BYS25EA)
+data$BYS42 <- as.factor(data$BYS42)
+data$BYS46B <- as.factor(data$BYS46B)
+data$BYS46A <- as.factor(data$BYS46A)
+data$BYS71G <- as.factor(data$BYS71G)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S27num <- data$F1S27
+data$F1S27 <- as.factor(data$F1S27num)
+data$F2B18G <- data$F2B18G
+data$F2B18G <- as.factor(data$F2B18G)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 1.7%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data2)
+summary(F2.lm) # R squared: 1.26%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # 1.7%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- glm(F2B18G ~ F1S27num, data = data2,family=multinomial(link='logit') )
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18Gnum ~ F1S27num, data = data2)
+data$F2B18Gnum <- data$F2B18G
+data$F2B18G <- as.factor(data$F2B18Gnum)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# First lets test relationship between BY extracurricular hours and F3 earnings
+F1.lm <- lm(F3ERN2011 ~ BYS42, data = data2)
+summary(F1.lm) # R squared: 1.7%
+# F1 Extracurricular Hours -> F3 earnings
+F2.lm <- lm(F3ERN2011 ~ F1S27, data = data2)
+summary(F2.lm) # R squared: 1.26%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # 1.7%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18Gnum ~ F1S27num, data = data2)
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18Gnum ~ F1S27num, data = data2)
+data$F2B18Gnum <- as.numeric(data$F2B18G)
+data$F2B18G <- as.factor(data$F2B18Gnum)
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18Gnum ~ F1S27num, data = data2)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+# F1 Extracurricular Hours -> F2 Extracurricular participation
+F3.lm <- lm(F2B18Gnum ~ F1S27num, data = data2)
+summary(F3.lm) #R squared: 2.7%
+# BY extracurricular hours -> F2 Extracurricular participation
+F4.lm <- lm(F2B18Gnum ~ F2B18G, data = data)
+summary(F4.lm) #R squared: 3.1%
+# BY extracurricular hours -> F2 Extracurricular participation
+F4.lm <- lm(F2B18Gnum ~ BYS42, data = data)
+summary(F4.lm) #R squared: 3.1%
+# BY extracurricular hours -> F1 Extracurricular Hours
+F8.lm <- lm(F1S27num ~ BYS42, data = data2)
+summary(F8.lm) # R squared: 25.87%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # 1.7%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18Gnum, data = data2)
+summary(F7.lm) # 1.7%
+# F2 Extracurricular participation -> F3 earnings
+F7.lm <- lm(F3ERN2011 ~ F2B18G, data = data2)
+summary(F7.lm) # 1.7%
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data3 <- data2
+data3<-data3[!(data3$F2FSTWGE==-9 | data3$F2FSTWGE==-3),]
+# Standardized test score -> F3 earnings
+F5.lm <- lm(F2FSTWGE ~ F2B18Gnum, data = data)
+summary(F5.lm)
+# F2 extracurricular -> F2 first wage
+F5.lm <- lm(F2FSTWGE ~ F2B18Gnum, data = data3)
+summary(F5.lm)
+# F2 extracurricular -> F2 first wage
+F5.lm <- lm(F2FSTWGE ~ F2B18Gnum, data = data2)
+summary(F5.lm)
+data4 <- data2
+data4<-data4[!(data4$F208C==-9 | data4$F208C==-3| data4$F208C==-7),]
+data4<-data4[!(data4$F2C08C==-9 | data4$F2C08C==-3| data4$F2C08C==-7),]
+unique(data4$F2C08C)
+data4$F2C08C <- as.factor(data4$F2C08C)
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- lm(F2C08C ~ F2B18Gnum, data = data)
+summary(F6.lm)
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- lm(F2C08C ~ F2B18Gnum, data = data)
+summary(F6.lm)
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- lm(F2C08C ~ F2B18G, data = data)
+summary(F6.lm)
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- lm(F2C08C ~ F2B18G, data = data4)
+summary(F6.lm) #2.965%
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- glm(F2C08C ~ F2B18G, data = data4, family=binomial(link='logit'))
+summary(F6.lm) #2.965%
+library(pscl)
+pR2(F6.lm)
+summary(F6.lm) #2.965%
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- glm(F2C08C ~ F2B18Gnum, data = data4, family=binomial(link='logit'))
+summary(F6.lm) #2.965%
+library(pscl)
+pR2(F6.lm)
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- lm(F2C08C ~ F2B18G, data = data4)
+summary(F6.lm) #2.965%
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- lm(F2C08C ~ F2B18Gnum, data = data4)
+summary(F6.lm) #2.965%
+# F2 extracurricular -> F2 job placement due to networking
+F6.lm <- glm(F2C08C ~ F2B18G, data = data4, family=binomial(link='logit'))
+summary(F6.lm) #2.965%
+pR2(F6.lm)
+# F1 extracurricular -> F2 job placement due to networking
+F6.lm <- glm(F2C08C ~ F1S27, data = data4, family=binomial(link='logit'))
+summary(F6.lm)
+library(pscl)
+pR2(F6.lm) #NOT SIGNIFICANT
+# F2 extracurricular -> F2 first wage
+F5.lm <- lm(F2FSTWGE ~ F2B18Gnum, data = data2)
+summary(F5.lm)
+# F2 extracurricular -> F2 first wage
+F5.lm <- lm(F2FSTWGE ~ F2B18Gnum, data = data3)
+summary(F5.lm) #2.46% r squared
+# F2 extracurricular -> F2 first wage
+F5.lm <- lm(F2FSTWGE ~ F2B18Gnum, data = data3)
+summary(F5.lm) #2.46% r squared
+library(readxl)
+data <- read_excel("C:/Users/yasir/OneDrive/GW/Academic/6317 - Practicum/Model/new_dataset_v4_data.xlsx")
+data$F1S64<- as.factor(data$F1S64)
+data$BYP85 <- as.factor(data$BYP85)
+data$BYPARED <- as.factor(data$BYPARED)
+data$F1RGPP2 <- as.factor(data$F1RGPP2)
+data$BYS23B <- as.factor(data$BYS23B)
+data$F1S31 <- as.factor(data$F1S31)
+data$BYS25EA <- as.factor(data$BYS25EA)
+data$BYS42 <- as.factor(data$BYS42)
+data$BYS46B <- as.factor(data$BYS46B)
+data$BYS46A <- as.factor(data$BYS46A)
+data$BYS71G <- as.factor(data$BYS71G)
+data$F1S60 <- as.factor(data$F1S60)
+data$F1S27num <- data$F1S27
+data$F1S27 <- as.factor(data$F1S27num)
+data$F2B18Gnum <- as.numeric(data$F2B18G)
+data$F2B18G <- as.factor(data$F2B18Gnum)
+#Remove null values from F2FSTWGE column and place in a separate table (to be used later)
+data2 <- data
+data2<-data2[!(data2$F1S27==-9 | data2$F1S27==-8| data2$F1S27==-4| data2$F1S27==-3| data2$F1S27==-2| data2$F1S27==-1 | data2$F2B18G==-9),]
+unique(data2$F1S27)
+install.packages("worldfootballR")
+library(worldfootballR)
+team_urls <- tm_league_team_urls(country_name = "England", start_year = 2016)
+team_urls
+count(team_urls)
+length(team_urls)
+player_urls <- tm_team_player_urls(team_url = "https://www.transfermarkt.com/manchester-city/startseite/verein/281/saison_id/2016")
+player_urls
+city_player_injuries
+city_player_injuries <- tm_player_injury_history(player_urls = city_player_urls)
+city_player_injuries
+city_player_urls <- tm_team_player_urls(team_url = "https://www.transfermarkt.com/manchester-city/startseite/verein/281/saison_id/2016")
+city_player_injuries <- tm_player_injury_history(player_urls = city_player_urls)
+city_player_injuries
+View(city_player_injuries)
+team_urls1 <- tm_league_team_urls(country_name = "England", start_year = 2016)
+city_player_urls <- tm_team_player_urls(team_urls = team_urls1)
+city_player_urls <- tm_team_player_urls(team_url = "https://www.transfermarkt.com/manchester-city/startseite/verein/281/saison_id/2016")
+x <- tm_league_team_urls
+x <- tm_league_team_urls()
+x
+x <- tm_league_team_urls(start_year = 2016)
+x <- tm_league_team_urls(country_name = 'England',start_year = 2016)
+x
+team_urls1 <- tm_league_team_urls(country_name = "England", start_year = 2023)
+team_urls1 <- tm_league_team_urls(country_name = "England", start_year = 2022)
+team_urls1
+library(worldfootballR)
+# Set the start and end years of the range you're interested in
+start_year <- 2016
+end_year <- 2022
+rm(list=ls())
+library(worldfootballR)
+# Set the start and end years of the range you're interested in
+start_year <- 2016
+end_year <- 2022
+# Get all the team URLs for England between 2016 and 2022
+team_urls <- tm_league_team_urls(country = "England",
+start_year = start_year, end_year = end_year)
+# Get all the team URLs for England between 2016 and 2022
+team_urls <- tm_league_team_urls(country = "England",
+start_year = start_year)
+# Initialize an empty list to store all player URLs
+all_player_urls <- list()
+# Loop over each team URL and get the player URLs for each team
+for (team_url in team_urls) {
+player_urls <- tm_team_player_urls(team_url)
+all_player_urls <- c(all_player_urls, player_urls)
+}
+all_player_urls
+# Flatten the list of player URLs
+all_player_urls <- unlist(all_player_urls)
+all_player_urls
+# Print the total number of player URLs obtained
+cat("Total number of player URLs:", length(all_player_urls), "\n")
+x <- tm_player_injury_history(player_urls = all_player_urls)
+x
+# Create empty list to store team URLs
+team_urls <- list()
+# Loop through start years from 2016 to 2022
+for (start_year in 2016:2022) {
+# Get team URLs for England in current start year
+current_team_urls <- tm_league_team_urls(country = "England",
+league = "Premier League",
+start_year = start_year)
+# Append current team URLs to list
+team_urls <- c(team_urls, current_team_urls)
+}
+# Create empty list to store team URLs
+team_urls <- list()
+# Loop through start years from 2016 to 2022
+for (start_year in 2016:2022) {
+# Get team URLs for England in current start year
+current_team_urls <- tm_league_team_urls(country = "England",
+start_year = start_year)
+# Append current team URLs to list
+team_urls <- c(team_urls, current_team_urls)
+}
+team_urls
+team_urls2 = unlist(team_urls)
+team_urls2
+# Loop over each team URL and get the player URLs for each team
+for (team_url in team_urls) {
+player_urls <- tm_team_player_urls(team_url)
+all_player_urls <- c(all_player_urls, player_urls)
+}
+# Get all the team URLs for England between 2016 and 2022
+team_urls2016 <- tm_league_team_urls(country = "England",
+start_year = 2016)
+team_urls2016
+# Flatten the list of team URLs
+team_urls2 = unlist(team_urls)
+# Initialize an empty list to store all player URLs
+all_player_urls <- list()
+# Loop over each team URL and get the player URLs for each team
+for (team_url in team_urls2) {
+player_urls <- tm_team_player_urls(team_url)
+all_player_urls <- c(all_player_urls, player_urls)
+}
+#Take only the unique player URLs to remove duplicates
+all_player_urls2 = unique(all_player_urls)
+# Print the total number of player URLs obtained
+cat("Total number of player URLs:", length(all_player_urls), "\n")
+cat("Total number of player URLs:", length(all_player_urls2), "\n")
+all_player_urls2
+all_player_urls
+all_player_urls2
+# Flatten the list of player URLs
+all_player_urls <- unlist(all_player_urls)
+all_player_urls
+#Take only the unique player URLs to remove duplicates
+all_player_urls2 = unique(all_player_urls)
+all_player_urls2
+# Print the total number of player URLs obtained
+cat("Total number of player URLs:", length(all_player_urls), "\n")
+cat("Total number of player URLs:", length(all_player_urls2), "\n")
+#Get injury history dataframe
+injuries <- tm_player_injury_history(player_urls = all_player_urls2)
+injuries
+View(injuries)
+#Save dataframe as csv
+write.csv(injuries, "injuries.csv", row.names = FALSE)
+#Save dataframe as csv
+setwd("C:/Users/yasir/OneDrive/ML Monday/1_soccer_injury")
+write.csv(injuries, "injuries.csv", row.names = FALSE)
